@@ -6,13 +6,17 @@
 
 <script>
 import BlogContianer from './views/BlogContianer';
+import WPServices from './services/WPServices';
 import axios from 'axios';
+
 
 export default {
   name: "App",
+
   components: {
     BlogContianer
   },
+
   data() {
     return {
       blogsData: [],
@@ -20,16 +24,18 @@ export default {
       tags: []
     }
   },
+
   methods: {
     async fetchBlogsData() {
       try {
-        const res = await axios.get('http://localhost:8080/posts/');
+        const res = await WPServices.getAllPosts();
         const data = await res.data;
         return data;
       } catch (error) {
         console.error(error);
       }
     },
+    
     async fetchSingleBlogData(id) {
       try {
         const res = await axios.get(`https://public-api.wordpress.com/rest/v1.1/sites/107403796/posts/${id}`);
@@ -40,10 +46,10 @@ export default {
       }
     },
   },
+
   async created() {
-    // blogData
     this.blogsData = await this.fetchBlogsData();
-    
+
     // categories
     let temp = []
     this.blogsData.forEach((item) => {

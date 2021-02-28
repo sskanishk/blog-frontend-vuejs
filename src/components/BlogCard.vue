@@ -1,4 +1,5 @@
 <template>
+<router-link :to="'/post/' + blogData.slug">
   <vs-card>
     <template #title>
       <h3>{{ blogData.title }}</h3>
@@ -15,6 +16,7 @@
       </vs-button>
     </template> -->
   </vs-card>
+</router-link>
 </template>
 
 <script>

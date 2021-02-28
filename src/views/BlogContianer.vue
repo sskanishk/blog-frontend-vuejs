@@ -59,7 +59,7 @@ export default {
 
 .blogs__wrapper-cont {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
 }
