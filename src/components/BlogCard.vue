@@ -1,0 +1,27 @@
+<template>
+  <vs-card>
+    <template #title>
+      <h3>{{ blogData.title }}</h3>
+    </template>
+    <template #img>
+      <img :src="blogData.thumbnail_image" :alt="blogData.thumbnail_image" />
+    </template>
+    <template #text>
+      <p>fhd</p>
+    </template>
+    <!-- <template #interactions>
+      <vs-button danger icon>
+        <i class="bx bx-heart"></i>
+      </vs-button>
+    </template> -->
+  </vs-card>
+</template>
+
+<script>
+export default {
+  name: "BlogCard",
+  props: {
+    blogData: Object,
+  }
+}
+</script>
