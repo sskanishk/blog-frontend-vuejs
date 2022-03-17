@@ -5,7 +5,7 @@
       <h3>{{ blogData.title }}</h3>
     </template>
     <template #img>
-      <img :src="blogData.thumbnail_image" :alt="blogData.thumbnail_image" />
+      <img :src="blogData.post_thumbnail.URL" :alt="blogData.title" />
     </template>
     <template #text>
       <p>fhd</p>
