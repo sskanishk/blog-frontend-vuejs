@@ -2,12 +2,12 @@
   <div class="sidebar__items">
     <h2>Category</h2>
     <ul>
-      <li :key="category.ID" v-for="category in categoryData" class="category__li">{{ category }}</li>
+      <li :key="category" v-for="category in categoryData" class="category__li">{{ category }}</li>
     </ul>
     <br />
     <h2>Tags</h2>
     <ul>
-      <li :key="tag.tag_name" v-for="tag in tagsData" class="category__li">{{ tag.tag_name }}</li>
+      <li :key="tag" v-for="tag in tagsData" class="category__li">{{ tag }}</li>
     </ul>
   </div>
 </template>

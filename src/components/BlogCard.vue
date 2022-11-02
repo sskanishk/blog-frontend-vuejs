@@ -1,5 +1,5 @@
 <template>
-<router-link :to="'/post/' + blogData.slug">
+<router-link :to="{path: `post/${blogData.slug}`, query: {id: blogData.ID }}">
   <vs-card>
     <template #title>
       <h3>{{ blogData.title }}</h3>
